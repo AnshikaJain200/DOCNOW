@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Disease Prediction Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container my-4">
+        <h3>Disease Prediction Result</h3>
+        <p><strong>Disease:</strong> {{ predicted_disease }}</p>
+        <h4>Description</h4>
+        <p>{{ dis_des }}</p>
+        <h4>Precautions</h4>
+        <ul>
+            {% for precaution in my_precautions %}
+                <li>{{ precaution }}</li>
+            {% endfor %}
+        </ul>
+        <h4>Medications</h4>
+        <ul>
+            {% for medication in medications %}
+                <li>{{ medication }}</li>
+            {% endfor %}
+        </ul>
+        <h4>Workouts</h4>
+        <ul>
+            {% for w in workout %}
+                <li>{{ w }}</li>
+            {% endfor %}
+        </ul>
+        <h4>Diet</h4>
+        <ul>
+            {% for diet in my_diet %}
+                <li>{{ diet }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

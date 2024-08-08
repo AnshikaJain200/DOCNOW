@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            background-image: url('https://static.vecteezy.com/system/resources/previews/000/221/759/large_2x/heart-beat-vector.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #fff;
+            font-family: 'Times New Roman', serif;
+        }
+        .navbar {
+            background-color: #003366; /* Dark Blue */
+            border-bottom: 2px solid #002244; /* Slightly darker blue for the border */
+        }
+        .navbar-brand {
+            color: #fff !important;
+            font-size: 1.5rem;
+        }
+        .navbar-brand:hover {
+            color: #cce5ff !important; /* Light blue for hover effect */
+        }
+        .nav-link {
+            color: #fff !important;
+        }
+        .nav-link:hover {
+            color: #cce5ff !important; /* Light blue for hover effect */
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        h1 {
+            color: #f8f9fa;
+        }
+        h2 {
+            color: #e2e6ea;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .patient-success {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .patient-success h3 {
+            color: #d4edda;
+        }
+        .patient-success p {
+            font-size: 16px;
+        }
+        @media (max-width: 768px) {
+            .navbar-brand {
+                font-size: 1.25rem;
+            }
+            .navbar-nav {
+                text-align: center;
+            }
+            .navbar-nav .nav-item {
+                margin: 0;
+            }
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="{{ url_for('index') }}">DocNow: HealthCare Recommendation System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('about') }}">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('contact') }}">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('blog') }}">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('developer') }}">Developer</a></li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            </form>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1>Blog</h1>
+        <p>Welcome to our blog! Here we share the latest updates, articles, and success stories related to health care and the innovative solutions offered by DocNow. Our goal is to provide valuable information and inspire positive health changes in your life.</p>
+
+        <!-- Success Stories -->
+        <h2>Success Stories</h2>
+        <div class="patient-success">
+            <h3>Sakshi</h3>
+            <p>Sakshi found remarkable relief from chronic back pain using our personalized workout recommendations and dietary adjustments. By integrating targeted exercises and following our nutritional advice, she experienced a significant improvement in her overall quality of life and mobility.</p>
+        </div>
+        <div class="patient-success">
+            <h3>Rahul Sharma</h3>
+            <p>Rahul managed his high blood pressure effectively with our curated medication recommendations and lifestyle changes. Adhering to our guidelines led to a noticeable decrease in his blood pressure levels, and he reported feeling more energetic and healthier overall.</p>
+        </div>
+        <div class="patient-success">
+            <h3>Sonal Jain</h3>
+            <p>Sonal benefited greatly from our tailored dietary plans and preventive measures. By following our recommended diet and exercise routine, she achieved substantial weight loss and experienced enhanced overall wellness, contributing to a more active and fulfilling lifestyle.</p>
+        </div>
+
+        <!-- Expert Opinions -->
+        <h2>Expert Opinions</h2>
+        <p>Our health experts share their insights on the importance of personalized health solutions. According to Dr. Aarti Mehta, "Customized health plans are crucial for addressing individual needs effectively. Our recommendations are based on a comprehensive analysis to ensure the best outcomes for our users."</p>
+
+        <!-- Practical Tips -->
+        <h2>Practical Tips</h2>
+        <p>Getting started with DocNow is simple. Begin by setting up your profile and inputting your health data. Follow the personalized recommendations provided for diet, exercise, and medication. Regularly update your progress to refine and enhance your plan for optimal results.</p>
+
+        <!-- Conclusion -->
+        <h2>Conclusion</h2>
+        <p>DocNow offers innovative and tailored solutions for better health management. Our success stories and expert insights highlight the benefits of our services. Start your journey with DocNow today and experience the positive impact of personalized health recommendations!</p>
+
+        <!-- Additional Resources -->
+        <h2>Additional Resources</h2>
+        <p>Explore further with our additional resources, including detailed guides on diet, exercise, and medication management. Check out our comprehensive articles and helpful tips to make the most of your health plan with DocNow.</p>
+
+        <!-- Comments Section -->
+        <h2>Comments</h2>
+        <p>We value your feedback and experiences. Share your thoughts or ask questions about our solutions. Your input helps us improve and provide better services to all our users.</p>
+
+        <!-- Contact Information -->
+        <h2>Contact Information</h2>
+        <p>For more details or inquiries, reach out to us at <a href="mailto:jainanshika850@gmail.com">jainanshika850@gmail.com</a>. We are here to assist you and ensure you get the best support for your health journey. Teerthanker Mahaveer University.</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

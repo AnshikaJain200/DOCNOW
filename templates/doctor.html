@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('https://www2.deloitte.com/content/dam/Deloitte/us/Images/blog/promos/phone-body-image-doctor-hands-handheld-promo.jpg/jcr:content/renditions/cq5dam.web.1200.627.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar-dark {
+            background-color: #003366;
+        }
+        .navbar-nav {
+            flex-direction: row;
+        }
+        .nav-item {
+            margin-left: 20px;
+        }
+        .container {
+            margin-top: 30px;
+            max-width: 900px;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .doctor-card {
+            margin-bottom: 20px;
+            background-color: #222;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+        }
+        .doctor-card img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        .doctor-card h3 {
+            margin: 0;
+        }
+        .doctor-card p {
+            margin: 5px 0;
+        }
+        .doctor-card .specialization {
+            font-weight: bold;
+        }
+        .additional-info {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .additional-info h2 {
+            margin-bottom: 20px;
+        }
+        .additional-info p {
+            margin-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            .doctor-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .doctor-card img {
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="{{ url_for('welcome') }}">DocNow: HealthCare Solutions</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('welcome') }}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('register') }}">Register</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('login') }}">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('doctor') }}">Doctors</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Our Experts</h1>
+        <!-- Doctor 1 -->
+        <div class="doctor-card">
+            <img src="https://thumbs.dreamstime.com/b/doctor-indian-38175884.jpg" alt="Doctor 1">
+            <div>
+                <h3>Dr. Aarti Sharma</h3>
+                <p class="specialization">Specialization: Cardiologist</p>
+                <p>Work Experience: 10 years at Apollo Hospitals, New Delhi</p>
+                <p>Education: MBBS, MD (Cardiology)</p>
+            </div>
+        </div>
+        <!-- Doctor 2 -->
+        <div class="doctor-card">
+            <img src="https://images.freeimages.com/images/premium/previews/1325/13258665-portrait-of-young-indian-doctor.jpg" alt="Doctor 2">
+            <div>
+                <h3>Dr. Rajesh Kumar</h3>
+                <p class="specialization">Specialization: Neurologist</p>
+                <p>Work Experience: 8 years at Fortis Healthcare, Mumbai</p>
+                <p>Education: MBBS, DM (Neurology)</p>
+            </div>
+        </div>
+        <!-- Doctor 3 -->
+        <div class="doctor-card">
+            <img src="https://img.freepik.com/premium-photo/indian-female-doctor-portrait-south-indian-young-lady-doctor-holding-stethoscope-hand_527904-1841.jpg?w=2000" alt="Dr. Meera Patel">
+            <div>
+                <h3>Dr. Meera Patel</h3>
+                <p class="specialization">Specialization: Pediatrician</p>
+                <p>Work Experience: 7 years at Max Super Speciality Hospital, Bangalore</p>
+                <p>Education: MBBS, DCH (Pediatrics)</p>
+            </div>
+        </div>
+
+        <!-- Additional Information -->
+        <div class="additional-info">
+            <h2>Why Choose Us?</h2>
+            <p>Our team of experienced doctors is dedicated to providing the best care tailored to your needs. We combine expertise, compassion, and state-of-the-art technology to ensure optimal health outcomes.</p>
+            <p>Each doctor on our team is highly qualified and has extensive experience in their field. We are committed to helping you achieve and maintain your best health.</p>
+            <p>Explore our services and meet our specialists to find the right care for you.</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

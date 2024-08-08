@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocNow: HealthCare Solutions</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            background: url('https://www.integrityss.com/hubfs/medical-technology.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .navbar {
+            background-color: #003366; /* Dark blue background */
+        }
+
+        .navbar a {
+            color: #fff;
+        }
+
+        .carousel-item {
+            height: 60vh;
+            background: none;
+        }
+
+        .carousel-caption {
+            background: rgba(200, 200, 200, 0.7); /* Light grey background */
+            border-radius: 15px;
+            padding: 20px;
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -25%);
+            text-align: center;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .carousel-caption h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: #003366; /* Dark blue color */
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+
+        .carousel-caption p {
+            font-size: 1.2em;
+            margin-bottom: 25px;
+            color: #333;
+            font-family: 'Georgia', serif;
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 20px;
+            background: rgba(300, 300, 300, 0.7); /* Light grey background */
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-section h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: #003366; /* Dark blue color */
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+
+        .hero-section p {
+            font-size: 1.2em;
+            margin-bottom: 25px;
+            color: #333;
+            font-family: 'Georgia', serif;
+        }
+
+        .section {
+            padding: 20px;
+            background: rgba(230, 230, 230, 0.8); /* Light grey background */
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .section h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #003366; /* Dark blue color */
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+
+        .section p {
+            font-size: 1em;
+            margin-bottom: 15px;
+            color: #333;
+            font-family: 'Georgia', serif;
+        }
+
+        .section a {
+            color: #00aaff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer {
+            padding: 20px;
+            background-color: #003366; /* Dark blue background */
+            color: #fff;
+            text-align: center;
+            font-size: 1.1em;
+        }
+
+        .footer h4 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+
+        .card h5 {
+            font-size: 1.5em;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        .card p {
+            font-size: 1em;
+            margin: 15px;
+            color: #333;
+        }
+
+        .testimonial-heading {
+            color: #000;
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .testimonial-box {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .testimonial-box h5 {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .testimonial-box p {
+            font-size: 1em;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .carousel-caption h1 {
+                font-size: 2em;
+            }
+
+            .carousel-caption p {
+                font-size: 1em;
+            }
+
+            .section h2 {
+                font-size: 1.5em;
+            }
+
+            .section p {
+                font-size: 1em;
+            }
+
+            .carousel-item {
+                height: 50vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html">DocNow: HealthCare Solutions</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('register') }}">Register</a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('doctor') }}">Doctors</a>
+
+
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Carousel -->
+    <div id="heroCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="carousel-caption">
+                    <h1>Welcome to DocNow: Your Health, Our Priority</h1>
+                    <p>Transforming Healthcare with Innovative Solutions</p>
+                    <p>Empowering Your Health Journey with Expertise</p>
+                    <a href="{{ url_for('register') }}" class="btn btn-primary">Get Started</a>
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-caption">
+                    <h1>Revolutionize Your Health Experience</h1>
+                    <p>Personalized Recommendations Just for You</p>
+                    <p>Your Comprehensive Health Companion</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-caption">
+                    <h1>Discover the Future of Healthcare</h1>
+                    <p>Simple, Effective, and Comprehensive</p>
+                    <p>Advanced Diagnosis and Recommendations</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!-- Sections -->
+    <div class="container">
+        <!-- Introduction to the System -->
+        <div class="section">
+            <h2>Revolutionize Your Health Experience</h2>
+            <p>Personalized Recommendations Just for You</p>
+            <p>Your Comprehensive Health Companion</p>
+        </div>
+
+        <!-- How It Works -->
+        <div class="section">
+            <h2>How DocNow Works: Simple and Effective</h2>
+            <p>Discover the Future of Healthcare</p>
+            <p>Your Path to Better Health Starts Here</p>
+        </div>
+
+        <!-- Key Features -->
+        <div class="section">
+            <h2>Advanced Diagnosis and Recommendations</h2>
+            <p>Tailored Health Insights at Your Fingertips</p>
+            <p>Comprehensive Health Solutions in One Place</p>
+        </div>
+
+        <!-- Why Choose Us -->
+        <div class="section">
+            <h2>Why DocNow? Because Your Health Matters</h2>
+            <p>Trusted by Thousands for Reliable Health Advice</p>
+            <p>Innovative Technology Meets Personalized Care</p>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="section">
+            <h2>Get Started with DocNow Today</h2>
+            <p>Explore Your Health Potential</p>
+            <p>Join the DocNow Community</p>
+             <a href="{{ url_for('register') }}" class="btn btn-primary">Sign Up Now</a>
+
+        </div>
+
+        <!-- Support and Contact -->
+        <div class="section">
+            <h2>Need Assistance? We’re Here to Help</h2>
+            <p>Reach Out for Support and Guidance</p>
+            <p>Contact Us for Personalized Support</p>
+            <a href="{{ url_for('contact') }}" class="btn btn-primary">Contact Us</a>
+
+        </div>
+
+        <!-- Testimonials -->
+        <div class="testimonial-heading">What Our Users Are Saying</div>
+        <div class="testimonial-box">
+            <h5>John Doe</h5>
+            <p>"DocNow has completely changed the way I approach my health. The personalized recommendations are spot on!"</p>
+        </div>
+        <div class="testimonial-box">
+            <h5>Jane Smith</h5>
+            <p>"I love how easy and effective DocNow is. It’s like having a personal health advisor available 24/7."</p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <h4>DocNow: Your Trusted Health Partner</h4>
+        <p>Committed to Your Well-Being</p>
+        <p>Thank You for Choosing DocNow</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

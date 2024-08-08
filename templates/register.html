@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('https://www2.deloitte.com/content/dam/Deloitte/us/Images/blog/promos/phone-body-image-doctor-hands-handheld-promo.jpg/jcr:content/renditions/cq5dam.web.1200.627.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar-dark {
+            background-color: #003366;
+        }
+        .container {
+            margin-top: 30px;
+            max-width: 600px;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            color: #f8f9fa;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .btn-primary {
+            width: 100%;
+        }
+        a {
+            color: #17a2b8;
+        }
+        a:hover {
+            color: #138496;
+        }
+        .success-message {
+            text-align: center;
+            margin-top: 20px;
+        }
+        @media (max-width: 576px) {
+            .container {
+                margin-top: 10px;
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="{{ url_for('welcome') }}">DocNow: HealthCare Solutions</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('welcome') }}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('register') }}">Register</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('login') }}">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('doctor') }}">Doctors</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Register</h1>
+        {% if success %}
+            <div class="success-message">
+                <p>You have registered successfully!</p>
+                <a href="{{ url_for('index') }}" class="btn btn-primary">Start Prediction</a>
+            </div>
+        {% else %}
+            <form method="POST" action="{{ url_for('register') }}">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm_password">Confirm Password:</label>
+                    <input type="password" id="confirm_password" name="confirm_password" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" class="form-control" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" id="phone" name="phone" class="form-control">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+            <p class="mt-3 text-center">Already have an account? <a href="{{ url_for('login') }}">Login here</a></p>
+        {% endif %}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

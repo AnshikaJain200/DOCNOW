@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            background-image: url('https://static.vecteezy.com/system/resources/previews/000/221/759/large_2x/heart-beat-vector.jpg'); /* Background Image */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #003366; /* Dark Blue */
+            border-bottom: 2px solid #002244; /* Slightly darker blue for the border */
+        }
+        .navbar-brand {
+            color: #fff !important;
+            font-size: 1.5rem;
+        }
+        .navbar-brand:hover {
+            color: #cce5ff !important; /* Light blue for hover effect */
+        }
+        .nav-link {
+            color: #fff !important;
+        }
+        .nav-link:hover {
+            color: #cce5ff !important; /* Light blue for hover effect */
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.9); /* Black background */
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        h1, h2 {
+            color: #cce5ff;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .developer-profile {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .developer-profile h3 {
+            color: #cce5ff;
+        }
+        @media (max-width: 768px) {
+            .navbar-brand {
+                font-size: 1.25rem;
+            }
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="{{ url_for('index') }}">DocNow: HealthCare Recommendation System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('about') }}">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('contact') }}">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('blog') }}">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('developer') }}">Developer</a></li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            </form>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1>Developer Information</h1>
+        <p>Welcome to the Developer page! Here you can learn more about the dedicated team behind DocNow and the technologies used in building this innovative health care recommendation system.</p>
+
+        <h2>Meet the Team</h2>
+
+        <div class="developer-profile">
+            <h3>Anshika Jain</h3>
+            <p>Anshika Jain is the lead developer and project manager of DocNow. With a background in computer science and a passion for health technology, Anshika has driven the vision and development of this project. She specializes in Python, Flask, and front-end technologies.</p>
+        </div>
+
+        <h2>Technologies Used</h2>
+        <ul>
+            <li><strong>Python</strong> - For backend development and data processing.</li>
+            <li><strong>Flask</strong> - As the web framework to build the application.</li>
+            <li><strong>Bootstrap</strong> - For responsive and modern front-end design.</li>
+            <li><strong>SQL</strong> - For database management and storage.</li>
+            <li><strong>JavaScript</strong> - To enhance interactivity and user experience.</li>
+            <li><strong>Machine Learning</strong> - For disease prediction, personalized recommendations, and improving system performance.</li>
+        </ul>
+
+        <h2>Contributions</h2>
+        <p>Anshika Jain has made invaluable contributions to the development of DocNow. From designing the user interface to coding the algorithms that power our recommendations, her efforts have resulted in a comprehensive and user-friendly health care solution.</p>
+
+        <h2>Future Plans</h2>
+        <p>We are continuously working on improving DocNow with new features and enhancements. Our goal is to expand our recommendations, integrate more advanced technologies, and ensure that DocNow remains at the forefront of health care innovation.</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

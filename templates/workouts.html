@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workouts for {{ disease }} - DocNow</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('https://st.depositphotos.com/1760224/2731/i/450/depositphotos_27317245-stock-photo-athlete-running-at-sunset-on.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding-top: 60px;
+            height: 100vh;
+        }
+        .navbar-dark {
+            background-color: #003366; /* Dark blue color */
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+        .heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .list-group-item {
+            background-color: transparent;
+            border: none;
+            color: white;
+        }
+        .btn {
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="/">DocNow: HealthCare Recommendation System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/developer">Developer</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            </form>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="heading">Workouts for {{ disease }}</h1>
+        <ul class="list-group">
+            {% if workout and workout|length > 0 %}
+                {% for item in workout %}
+                    <li class="list-group-item">{{ item }}</li>
+                {% endfor %}
+            {% else %}
+                <li class="list-group-item">No workouts available for this disease.</li>
+            {% endif %}
+        </ul>
+        <a href="/" class="btn btn-primary mt-4">Back to Home</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

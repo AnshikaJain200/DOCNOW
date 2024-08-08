@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            background-image: url('https://static.vecteezy.com/system/resources/previews/000/221/759/large_2x/heart-beat-vector.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #fff;
+            font-family: 'Times New Roman', serif;
+        }
+        .navbar {
+            background-color: #003366; /* Dark Blue */
+            border-bottom: 2px solid #002244; /* Slightly darker blue for the border */
+        }
+        .navbar-brand {
+            color: #fff !important;
+            font-size: 1.5rem;
+        }
+        .navbar-brand:hover {
+            color: #cce5ff !important; /* Light blue for hover effect */
+        }
+        .nav-link {
+            color: #fff !important;
+        }
+        .nav-link:hover {
+            color: #cce5ff !important; /* Light blue for hover effect */
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        h1 {
+            color: #f8f9fa;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+        @media (max-width: 768px) {
+            .navbar-brand {
+                font-size: 1.25rem;
+            }
+            .navbar-nav {
+                text-align: center;
+            }
+            .navbar-nav .nav-item {
+                margin: 0;
+            }
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="{{ url_for('index') }}">DocNow: HealthCare Recommendation System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('about') }}">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('contact') }}">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('blog') }}">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('developer') }}">Developer</a></li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            </form>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1>About Us</h1>
+        <p><strong>Welcome to DocNow: Revolutionizing Healthcare with Innovation</strong></p>
+        <p>At DocNow, our mission is to transform the way you manage your health with cutting-edge technology and personalized care. We are dedicated to providing you with advanced health solutions that are both effective and accessible.</p>
+        <p><strong>What is DocNow?</strong></p>
+        <p>DocNow is an innovative health management platform designed to offer personalized health recommendations and insights. Our system leverages advanced technology to provide accurate diagnoses, treatment suggestions, and wellness advice based on your specific needs and symptoms.</p>
+        <p><strong>Our Vision</strong></p>
+        <p>Our vision is to empower individuals with the tools and knowledge they need to take control of their health. We aim to make high-quality healthcare accessible to everyone, regardless of their location or schedule. By combining technology with personalized care, we strive to improve health outcomes and enhance the overall wellness experience.</p>
+        <p><strong>Virtual Benefits of Using DocNow</strong></p>
+        <ul>
+            <li><strong>Accessibility Anytime, Anywhere:</strong> Access personalized health recommendations and information from the comfort of your home, at any time. No need for in-person visits or appointments.</li>
+            <li><strong>Convenient Health Management:</strong> Input your symptoms and receive immediate feedback and recommendations without the need for lengthy consultations. Save time and streamline your health management process.</li>
+            <li><strong>Secure and Private:</strong> Your health data is securely managed and kept confidential. DocNow ensures that your information is protected with advanced encryption and security measures.</li>
+            <li><strong>Real-Time Updates:</strong> Stay informed with real-time updates and recommendations tailored to your current health status. Receive timely advice and alerts based on the latest health data and insights.</li>
+            <li><strong>Comprehensive Health Insights:</strong> Benefit from a wide range of health information and insights, all in one place. DocNow provides detailed recommendations and guidance to help you make informed health decisions.</li>
+        </ul>
+        <p><strong>How It Works</strong></p>
+        <p>DocNow operates on a simple and user-friendly interface that allows you to input your symptoms and receive immediate, personalized feedback. Our system uses advanced algorithms to analyze your data and provide you with accurate diagnoses and recommendations.</p>
+        <p><strong>Key Features</strong></p>
+        <ul>
+            <li><strong>Advanced Diagnosis and Recommendations:</strong> Our platform offers precise health insights and recommendations tailored to your symptoms.</li>
+            <li><strong>Personalized Health Insights:</strong> Receive advice and guidance specific to your health needs and conditions.</li>
+            <li><strong>Comprehensive Health Solutions:</strong> Access a range of health information, from disease descriptions to treatment options, all in one place.</li>
+        </ul>
+        <p><strong>Why Choose DocNow?</strong></p>
+        <ul>
+            <li><strong>Trusted by Thousands:</strong> DocNow is relied upon by a large community for accurate and reliable health advice.</li>
+            <li><strong>Innovative Technology:</strong> We use the latest technology to ensure you receive the most up-to-date and effective health solutions.</li>
+            <li><strong>Personalized Care:</strong> Our system is designed to provide recommendations that are specifically tailored to you.</li>
+        </ul>
+        <p><strong>Get Started Today</strong></p>
+        <p>Join the DocNow community and experience a new way of managing your health. Whether you’re looking for personalized health recommendations or comprehensive health insights, DocNow is here to support you every step of the way.</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
